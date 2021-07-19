@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Cartao de Visita</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_card_visit_home">Cartão de Visitas</string>
+    <string name="text_card_visit_add">Novo cartão</string>
+    <string name="text_add_card_visit">Adicionar</string>
+    <string name="text_card_visit_name">Nome:</string>
+    <string name="text_card_visit_phone">Telefone:</string>
+    <string name="text_card_visit_email">Email:</string>
+
+</resources>

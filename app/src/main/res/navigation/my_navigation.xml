@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.silva021.cartaodevisita.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_card_visit"
+            app:destination="@id/fragment_card_visit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_card_visit"
+        android:name="com.silva021.cartaodevisita.ui.cardvisit.CardVisitFragment"
+        android:label="Card Visit"
+        tools:layout="@layout/fragment_card_visit" />
+</navigation>
