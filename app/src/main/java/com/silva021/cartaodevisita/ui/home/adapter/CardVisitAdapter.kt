@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.silva021.cartaodevisita.databinding.ItemCardVisitBinding
-import com.silva021.cartaodevisita.domain.model.People
+import com.silva021.cartaodevisita.domain.model.User
 
-class CardVisitAdapter(private val list: List<People>) :
+class CardVisitAdapter(private val list: List<User>) :
     RecyclerView.Adapter<CardVisitAdapter.CardVisitViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardVisitViewHolder {
         return CardVisitViewHolder(
@@ -24,11 +24,11 @@ class CardVisitAdapter(private val list: List<People>) :
 
     class CardVisitViewHolder(private val binding: ItemCardVisitBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(people: People) {
-            binding.textName.text = people.name
-            binding.textEmail.text = people.email
-            binding.textPhone.text = people.phone
-            binding.textTitleCompany.text = people.enterprise
+        fun bind(user: User) {
+            binding.textName.text = user.name
+            binding.textEmail.text = user.email
+            binding.textPhone.text = user.phone
+            binding.textTitleCompany.text = user.enterprise
         }
     }
 }

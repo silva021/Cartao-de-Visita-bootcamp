@@ -1,6 +1,6 @@
 package com.silva021.cartaodevisita.domain.model
 
-data class People(
+data class User(
     val name: String,
     val phone: String,
     val email: String,
