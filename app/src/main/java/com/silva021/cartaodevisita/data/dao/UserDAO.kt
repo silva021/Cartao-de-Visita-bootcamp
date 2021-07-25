@@ -8,10 +8,9 @@ import com.silva021.cartaodevisita.domain.model.User
 
 @Dao
 interface UserDAO {
-
     @Query("SELECT * FROM t_User")
     fun getAll(): List<UserEntity>
 
     @Insert
-    fun insertUser(vararg user: UserEntity)
+    fun insertUser(user: UserEntity) :Long
 }
