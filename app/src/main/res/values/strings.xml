@@ -6,7 +6,9 @@
     <string name="text_card_visit_add">Novo cartão</string>
     <string name="text_add_card_visit">Adicionar</string>
     <string name="text_card_visit_name">Nome:</string>
+    <string name="text_card_visit_enterprise">Empresa:</string>
     <string name="text_card_visit_phone">Telefone:</string>
     <string name="text_card_visit_email">Email:</string>
+    <string name="text_button_add_card_visit">Confirmar</string>
 
 </resources>

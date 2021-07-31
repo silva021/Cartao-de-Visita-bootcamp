@@ -1,7 +1,6 @@
 package com.silva021.cartaodevisita.ui.cardvisit
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +10,7 @@ import com.silva021.cartaodevisita.databinding.FragmentCardVisitBinding
 import com.silva021.cartaodevisita.domain.model.User
 import com.silva021.cartaodevisita.utils.extension.clearFields
 import com.silva021.cartaodevisita.utils.extension.finish
+import com.silva021.cartaodevisita.utils.extension.hideKeyboard
 import com.silva021.cartaodevisita.utils.extension.validateField
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -34,7 +34,11 @@ class CardVisitFragment : Fragment() {
 
     private fun validateFields(): Boolean {
         with(binding) {
-            return editEmail.validateField() && editName.validateField() && editEnterprise.validateField()
+            return validateField(
+                textInputLayoutEditEmail,
+                textInputLayoutEditName,
+                textInputLayoutEditEnterprise
+            )
         }
     }
 
@@ -46,18 +50,17 @@ class CardVisitFragment : Fragment() {
         with(binding) {
             return User(
                 id = 0,
-                name = editName.text.toString(),
-                phone = editNumberPhone.text.toString(),
-                email = editEmail.text.toString(),
-                enterprise = editEnterprise.text.toString())
+                name = textInputEditName.text.toString(),
+                phone = textInputEditNumberPhone.text.toString(),
+                email = textInputEditEmail.text.toString(),
+                enterprise = textInputEditEnterprise.text.toString())
         }
     }
 
     private fun setupListener() {
         binding.buttonAddCardVisit.setOnClickListener {
-            if (validateFields()) {
+            if (validateFields())
                 addCardVisit()
-            }
         }
 
         binding.toolbar.setNavigationOnClickListener {
@@ -69,7 +72,12 @@ class CardVisitFragment : Fragment() {
         cardVisitViewModel.response.observe(viewLifecycleOwner, {
             if (it) {
                 with(binding) {
-                    clearFields(editEmail, editEnterprise, editName, editNumberPhone)
+                    clearFields(
+                        textInputLayoutEditEmail,
+                        textInputLayoutEditEnterprise,
+                        textInputLayoutEditName,
+                        textInputLayoutEditNumberPhone
+                    )
                     Snackbar.make(root, "Novo cartão adicionado!", Snackbar.LENGTH_SHORT)
                         .show()
                 }

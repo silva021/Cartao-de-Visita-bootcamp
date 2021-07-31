@@ -6,6 +6,8 @@
     android:layout_height="140dp"
     android:layout_margin="@dimen/size_6dp"
     android:backgroundTint="@color/gray"
+    android:clickable="true"
+    android:focusable="true"
     app:cardCornerRadius="@dimen/size_6dp"
     app:cardElevation="@dimen/size_6dp"
     app:layout_constraintBottom_toBottomOf="parent"

@@ -18,60 +18,88 @@
         app:title="@string/text_card_visit_add"
         app:titleTextColor="@color/white" />
 
-
-    <EditText
-        android:id="@+id/edit_name"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_edit_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/size_16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/size_20dp"
         android:layout_marginEnd="@dimen/size_16dp"
-        android:hint="Nome"
+        android:hint="@string/text_card_visit_name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
-    <EditText
-        android:id="@+id/edit_enterprise"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_edit_enterprise"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/size_16dp"
-        android:layout_marginTop="@dimen/size_6dp"
+        android:layout_marginTop="@dimen/size_20dp"
         android:layout_marginEnd="@dimen/size_16dp"
-        android:hint="Empresa"
+        android:hint="@string/text_card_visit_enterprise"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_edit_name">
 
-    <EditText
-        android:id="@+id/edit_number_phone"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edit_enterprise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_edit_number_phone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/size_16dp"
-        android:layout_marginTop="@dimen/size_6dp"
+        android:layout_marginTop="@dimen/size_20dp"
         android:layout_marginEnd="@dimen/size_16dp"
-        android:hint="Telefone de Contato"
+        android:hint="@string/text_card_visit_phone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_enterprise" />
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_edit_enterprise">
 
-    <EditText
-        android:id="@+id/edit_email"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edit_number_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_edit_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/size_16dp"
-        android:layout_marginTop="@dimen/size_6dp"
+        android:layout_marginTop="@dimen/size_20dp"
         android:layout_marginEnd="@dimen/size_16dp"
-        android:hint="Email"
+        android:hint="@string/text_card_visit_email"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_number_phone" />
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_edit_number_phone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/button_add_card_visit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Confirmar"
+        android:text="@string/text_button_add_card_visit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
